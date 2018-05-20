@@ -68,8 +68,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.14. 	Now confirm you have policies as below figure.
 
-
-![IAM role policies.png](/images/IAM role policies.png)
+![IAM role policies.png](/images/IAM-role-policies.png)
 
 
 #### Add Crawler
@@ -100,9 +99,9 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.27. 	When the crawler has finished, one table has been added. Choose **Tables** in the left navigation pane, and then choose **data** to confirmed.
 
-![AWS Glue table has been added.png](/images/AWS Glue table has been added.png)
+![.png](/images/AWS-Glue-table-has-been-added.png)
 
-![table information.png](/images/table information.png)
+![.png](/images/table-information.png)
 
 
 #### Transform the Data from CSV to Parquet Format
@@ -131,7 +130,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.37. 	View the job. This screen provides a complete view of the job and allows you to edit, click **Save**, and choose **Run job**. This steps may be waiting around 10 minutes.
 
-![job running.png](/images/job running.png)
+![job running.png](/images/job-running.png)
 
 
 #### Add the Parquet Table and Crawler
@@ -160,7 +159,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.49. 	After the crawler has finished, there are two tables in the **nycitytaxi** database: a table for the raw CSV data and a table for the transformed Parquet data.
 
-![table for transformed parquet data.png](/images/table for transformed parquet data.png)
+![table for transformed parquet data.png](/images/table-for-transformed-parquet-data.png)
 
 
 #### Analyze the Data with Amazon Athena
@@ -169,7 +168,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.51. 	On the **Query Editor** tab, choose the database **nycitytaxi**.
 
-![Athena query editor.png](/images/Athena query editor.png)
+![Athena query editor.png](/images/Athena-query-editor.png)
 
 1.52. 	Choose the **aws_glue_result_xxxx** table.
 
@@ -179,7 +178,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.54. 	Choose **Run Query**.
 
-![Athena run query.png](/images/Athena run query.png)
+![Athena run query.png](/images/Athena-run-query.png)
 
 
 ## Conclusion
