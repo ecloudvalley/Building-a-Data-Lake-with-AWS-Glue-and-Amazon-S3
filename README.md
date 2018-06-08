@@ -52,7 +52,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
         			"logs:CreateLogStream",
         			"logs:PutLogEvents",
         			"logs:DescribeLogStreams"
-    		],
+    			],
       			"Resource": [
         		"arn:aws:logs:*:*:*"
     			]
