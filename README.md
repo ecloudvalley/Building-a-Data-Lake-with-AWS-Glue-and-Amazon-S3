@@ -42,23 +42,23 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 10. On the JSON tab, paste in the following policy:
 
-	{
-  		"Version": "2012-10-17",
-  		"Statement": [
-    	{
-      		"Effect": "Allow",
-      		"Action": [
-        		"logs:CreateLogGroup",
-        		"logs:CreateLogStream",
-        		"logs:PutLogEvents",
-        		"logs:DescribeLogStreams"
-    	],
-      		"Resource": [
+		{
+  			"Version": "2012-10-17",
+  			"Statement": [
+    		{
+      			"Effect": "Allow",
+      			"Action": [
+        			"logs:CreateLogGroup",
+        			"logs:CreateLogStream",
+        			"logs:PutLogEvents",
+        			"logs:DescribeLogStreams"
+    		],
+      			"Resource": [
         		"arn:aws:logs:*:*:*"
-    		]
-  		}
- 		]
-	}
+    			]
+  			}
+ 			]
+		}
 
 11. Click **Review policy**.
 
