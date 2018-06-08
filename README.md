@@ -174,7 +174,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 4. Query the data, type below standard SQL:
 
-	Select * From "nycitytaxi"."data" limit 10;
+		Select * From "nycitytaxi"."data" limit 10;
 
 5. Choose **Run Query**.
 
