@@ -28,7 +28,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 4. For role type, choose **AWS Service**, find and choose **Glue**, and choose **Next: Permissions**.
 
-5. On the **Attach permissions policy** page, search and choose **AWSS3FullAccess**, **AWSGlueServiceRole**, and choose **Next: Review**.
+5. On the **Attach permissions policy** page, search and choose **AmazonS3FullAccess**, **AWSGlueServiceRole**, and choose **Next: Review**.
 
 6. On the **Review** page, enter the following detail:
 
