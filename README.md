@@ -18,7 +18,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 
 ## Lab tutorial
-#### Create IAM role
+### Create IAM role
 
 1. On the **service** menu, click **IAM**.
 
@@ -71,7 +71,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ![IAM role policies.png](/images/IAM-role-policies.png)
 
 
-#### Add Crawler
+### Add Crawler
 
 1. On the **Services** menu, click **AWS Glue**.
 
@@ -104,7 +104,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ![.png](/images/table-information.png)
 
 
-#### Transform the Data from CSV to Parquet Format
+### Transform the Data from CSV to Parquet Format
 
 1. In the navigation pane, under **ETL**, choose **Jobs**, and then choose **Add job**.
 
@@ -133,7 +133,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ![job running.png](/images/job-running.png)
 
 
-#### Add the Parquet Table and Crawler
+### Add the Parquet Table and Crawler
 
 1. When the job has finished, add a new table for the Parquet data using a crawler.
 
@@ -162,7 +162,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ![table for transformed parquet data.png](/images/table-for-transformed-parquet-data.png)
 
 
-#### Analyze the Data with Amazon Athena
+### Analyze the Data with Amazon Athena
 
 1. On the **Services** menu, click **Athena**.
 
