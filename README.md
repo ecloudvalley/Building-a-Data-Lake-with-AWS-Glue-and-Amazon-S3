@@ -20,27 +20,27 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ## Lab tutorial
 ### Create IAM role
 
-1. On the **service** menu, click **IAM**.
+1.1. On the **service** menu, click **IAM**.
 
-2. In the navigation pane, choose **Roles**.
+1.2. In the navigation pane, choose **Roles**.
 
-3. Click **Create role**.
+1.3. Click **Create role**.
 
-4. For role type, choose **AWS Service**, find and choose **Glue**, and choose **Next: Permissions**.
+1.4. For role type, choose **AWS Service**, find and choose **Glue**, and choose **Next: Permissions**.
 
-5. On the **Attach permissions policy** page, search and choose **AmazonS3FullAccess**, **AWSGlueServiceRole**, and choose **Next: Review**.
+1.5. On the **Attach permissions policy** page, search and choose **AmazonS3FullAccess**, **AWSGlueServiceRole**, and choose **Next: Review**.
 
-6. On the **Review** page, enter the following detail:
+1.6. On the **Review** page, enter the following detail:
 
 * **Role name: AWSGlueServiceRoleDefault**
 
-7. Click **Create role**.
+1.7. Click **Create role**.
 
-8. Choose **Roles** page, select the role **AWSGlueServiceDefault** you just created.
+1.8. Choose **Roles** page, select the role **AWSGlueServiceDefault** you just created.
 
-9. On the **Permissions** tab, choose the link **add inline policy** to create an inline policy.
+1.9. On the **Permissions** tab, choose the link **add inline policy** to create an inline policy.
 
-10. On the JSON tab, paste in the following policy:
+1.10. On the JSON tab, paste in the following policy:
 
 		{
   			"Version": "2012-10-17",
@@ -60,44 +60,44 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
  			]
 		}
 
-11. Click **Review policy**.
+1.11. Click **Review policy**.
 
-12. On the Review policy, enter policy name: **AWSCloudWatchLogs**.
+1.12. On the Review policy, enter policy name: **AWSCloudWatchLogs**.
 
-13. Click **Create policy**.
+1.13. Click **Create policy**.
 
-14. Now confirm you have policies as below figure.
+1.14. Now confirm you have policies as below figure.
 
 ![IAM role policies.png](/images/IAM-role-policies.png)
 
 
 ### Add Crawler
 
-1. On the **Services** menu, click **AWS Glue**.
+2.1. On the **Services** menu, click **AWS Glue**.
 
-2. In the console, choose **Add database**. In the **Database name**, type **nycitytaxi**, and choose **Create**.
+2.2. In the console, choose **Add database**. In the **Database name**, type **nycitytaxi**, and choose **Create**.
 
-3. Choose **Crawlers** in the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxicrawler**, and choose **Next**.
+2.3. Choose **Crawlers** in the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxicrawler**, and choose **Next**.
 
-4. On the **Add a data store** page, choose **S3** as data store.
+2.4. On the **Add a data store** page, choose **S3** as data store.
 
-5. Select **Specified path in my account**.
+2.5. Select **Specified path in my account**.
 
-6. Enter data store path **s3://aws-bigdata-blog/artifacts/glue-data-lake/data/**, and choose **Next**.
+2.6. Enter data store path **s3://aws-bigdata-blog/artifacts/glue-data-lake/data/**, and choose **Next**.
 
-7. On **Add another data store** page, choose **No**, and choose **Next**.
+2.7. On **Add another data store** page, choose **No**, and choose **Next**.
 
-8. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
+2.8. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
 
-9. For **Frequency**, choose **Run on demand**, and choose **Next**.
+2.9. For **Frequency**, choose **Run on demand**, and choose **Next**.
 
-10. For **Database**, choose **nycitytaxi**, and choose **Next**.
+2.10. For **Database**, choose **nycitytaxi**, and choose **Next**.
 
-11. Review the steps, and choose **Finish**.
+2.11. Review the steps, and choose **Finish**.
 
-12. The crawler is ready to run. Click **Run it now**.
+2.12. The crawler is ready to run. Click **Run it now**.
 
-13. When the crawler has finished, one table has been added. Choose **Tables** in the left navigation pane, and then choose **data** to confirmed.
+2.13. When the crawler has finished, one table has been added. Choose **Tables** in the left navigation pane, and then choose **data** to confirmed.
 
 ![.png](/images/AWS-Glue-table-has-been-added.png)
 
@@ -106,77 +106,77 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 ### Transform the Data from CSV to Parquet Format
 
-1. In the navigation pane, under **ETL**, choose **Jobs**, and then choose **Add job**.
+3.1. In the navigation pane, under **ETL**, choose **Jobs**, and then choose **Add job**.
 
-2. On the Job properties, enter the following details:
+3.2. On the Job properties, enter the following details:
 
 * **Name: nytaxi-csv-parquet**
 	
 * **IAM role**: choose **AWSGlueServiceRoleDefault**
 
-3. For **This job runs**, select **A proposed script generated by AWS Glue**.
+3.3. For **This job runs**, select **A proposed script generated by AWS Glue**.
 
-4. Choose **Next**.
+3.4. Choose **Next**.
 
-5. Choose **data** as the data source, and choose **Next**.
+3.5. Choose **data** as the data source, and choose **Next**.
 
-6. Choose **Create tables in your data target**.
+3.6. Choose **Create tables in your data target**.
 
-7. For Data store, choose Amazon S3, and choose **Parquet** as the format.
+3.7. For Data store, choose Amazon S3, and choose **Parquet** as the format.
 
-8. For **Target path**, select S3 bucket with **s3://aws-glue-result-xxxx** to store the results.
+3.8. For **Target path**, select S3 bucket with **s3://aws-glue-result-xxxx** to store the results.
 
-9. Verify the schema mapping, and choose **Finish**.
+3.9. Verify the schema mapping, and choose **Finish**.
 
-10. View the job. This screen provides a complete view of the job and allows you to edit, click **Save**, and choose **Run job**. This steps may be waiting around 10 minutes.
+3.10. View the job. This screen provides a complete view of the job and allows you to edit, click **Save**, and choose **Run job**. This steps may be waiting around 10 minutes.
 
 ![job running.png](/images/job-running.png)
 
 
 ### Add the Parquet Table and Crawler
 
-1. When the job has finished, add a new table for the Parquet data using a crawler.
+4.1. When the job has finished, add a new table for the Parquet data using a crawler.
 
-2. In the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxiparquet**, and choose **Next**.
+4.2. In the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxiparquet**, and choose **Next**.
 
-3. Choose S3 as the **Data store**.
+4.3. Choose S3 as the **Data store**.
 
-4. Include path choose **s3://aws-glue-result-xxxx** to store data.
+4.4. Include path choose **s3://aws-glue-result-xxxx** to store data.
 
-5. Choose **Next**.
+4.5. Choose **Next**.
 
-6. On **Add another data store** page, choose **No**, and choose **Next**.
+4.6. On **Add another data store** page, choose **No**, and choose **Next**.
 
-7. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
+4.7. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
 
-8. For **Frequency**, choose **Run on demand**, and choose **Next**.
+4.8. For **Frequency**, choose **Run on demand**, and choose **Next**.
 
-9. For **Database**, choose **nycitytaxi**, and choose **Next**.
+4.9. For **Database**, choose **nycitytaxi**, and choose **Next**.
 
-10. Review the steps, and choose **Finish**.
+4.10. Review the steps, and choose **Finish**.
 
-11. The crawler is ready to run. Choose **Run it now**.
+4.11. The crawler is ready to run. Choose **Run it now**.
 
-12. After the crawler has finished, there are two tables in the **nycitytaxi** database: a table for the raw CSV data and a table for the transformed Parquet data.
+4.12. After the crawler has finished, there are two tables in the **nycitytaxi** database: a table for the raw CSV data and a table for the transformed Parquet data.
 
 ![table for transformed parquet data.png](/images/table-for-transformed-parquet-data.png)
 
 
 ### Analyze the Data with Amazon Athena
 
-1. On the **Services** menu, click **Athena**.
+5.1. On the **Services** menu, click **Athena**.
 
-2. On the **Query Editor** tab, choose the database **nycitytaxi**.
+5.2. On the **Query Editor** tab, choose the database **nycitytaxi**.
 
 ![Athena query editor.png](/images/Athena-query-editor.png)
 
-3. Choose the **aws_glue_result_xxxx** table.
+5.3. Choose the **aws_glue_result_xxxx** table.
 
-4. Query the data, type below standard SQL:
+5.4. Query the data, type below standard SQL:
 
 		Select * From "nycitytaxi"."data" limit 10;
 
-5. Choose **Run Query**.
+5.5. Choose **Run Query**.
 
 ![Athena run query.png](/images/Athena-run-query.png)
 
