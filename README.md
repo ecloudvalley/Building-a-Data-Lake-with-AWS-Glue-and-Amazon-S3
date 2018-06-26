@@ -162,7 +162,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 ![table for transformed parquet data.png](/images/table-for-transformed-parquet-data.png)
 
 
-### Analyze the Data with Amazon Athena
+### Query the Data with Amazon Athena
 
 5.1. On the **Services** menu, click **Athena**.
 
@@ -180,6 +180,12 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 ![Athena run query.png](/images/Athena-run-query.png)
 
+
+## Appendix - Analyze the data with Amazon Athena
+
+Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is capable of querying CSV data. However, the Parquet file format significantly reduces the time and cost of querying the data. 
+
+To use AWS Glue with Amazon Athena, you must upgrade your Athena data catalog to the AWS Glue Data Catalog. For more information about upgrading your Athena data catalog, see this [step-by-step guide](https://docs.aws.amazon.com/athena/latest/ug/glue-upgrade.html).
 
 ## Conclusion
 
