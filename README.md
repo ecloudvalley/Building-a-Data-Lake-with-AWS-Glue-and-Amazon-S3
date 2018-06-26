@@ -87,7 +87,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 7. On **Add another data store** page, choose **No**, and choose **Next**.
 
-8. Select Choose an existing IAM role, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
+8. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
 
 9. For **Frequency**, choose **Run on demand**, and choose **Next**.
 
@@ -95,7 +95,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 11. Review the steps, and choose **Finish**.
 
-12. The crawler is ready to run. Choose **Run it now**.
+12. The crawler is ready to run. Click **Run it now**.
 
 13. When the crawler has finished, one table has been added. Choose **Tables** in the left navigation pane, and then choose **data** to confirmed.
 
