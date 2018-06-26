@@ -124,7 +124,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 3.7. For Data store, choose Amazon S3, and choose **Parquet** as the format.
 
-3.8. For **Target path**, choose a new location (a new prefix location without any existing objects) to store the results.
+3.8. For **Target path**, choose **s3://aws-glue-result-xxxx** to store data.
 
 3.9. Verify the schema mapping, and choose **Finish**.
 
