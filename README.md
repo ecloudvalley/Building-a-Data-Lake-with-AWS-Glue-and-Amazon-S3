@@ -141,7 +141,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 4.3. Choose S3 as the **Data store**.
 
-4.4. Include path choose **s3://aws-glue-result-xxxx** to store data.
+4.4. Include path type **s3://aws-glue-result-xxxx** (where **`xxxx`** is your name) to store data.
 
 4.5. Choose **Next**.
 
