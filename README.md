@@ -124,7 +124,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 3.7. For Datastore, choose Amazon S3, and choose **Parquet** as the format.
 
-3.8. For **Target path**, choose **s3://aws-glue-result-xxxx** to store data.
+3.8. For **Target path**, type **s3://aws-glue-result-xxxx** to store data where **`xxxx`** is your name.
 
 3.9. Verify the schema mapping, and choose **Finish**.
 
@@ -135,9 +135,9 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 ### Add the Parquet Table and Crawler
 
-4.1. When the job has finished, add a new table for the Parquet data using a crawler.
+4.1. When the job has finished, back to **AwS Glue console**, click **Tables** on left navigation pane.
 
-4.2. In the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxiparquet**, and choose **Next**.
+4.2. Click **Add tables ->　Add tables using a crawler**, type Crawler name **nytaxiparquet** and click **Next**.
 
 4.3. Choose S3 as the **Data store**.
 
