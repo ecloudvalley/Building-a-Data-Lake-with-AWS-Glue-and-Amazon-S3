@@ -85,7 +85,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 2.6. Enter data store path **s3://aws-bigdata-blog/artifacts/glue-data-lake/data/** and click **Next**.
 
-2.7. On **Add another data store** page, choose **No**, and choose **Next**.
+2.7. On **Add another data store** page, select **No**, and click **Next**.
 
 2.8. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
 
