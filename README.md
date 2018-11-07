@@ -22,13 +22,13 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.1. On the **service** menu, click **IAM**.
 
-1.2. In the navigation pane, choose **Roles**.
+1.2. In the navigation pane, click **Roles**.
 
 1.3. Click **Create role**.
 
-1.4. For role type, choose **AWS Service**, find and choose **Glue**, and choose **Next: Permissions**.
+1.4. For role type, choose **AWS Service**, find and choose **Glue**, and click **Next: Permissions**.
 
-1.5. On the **Attach permissions policy** page, search and choose **AmazonS3FullAccess**, **AWSGlueServiceRole**, and choose **Next: Review**.
+1.5. On the **Attach permissions policy** page, search and select **AmazonS3FullAccess**, **AWSGlueServiceRole**, and click **Next: Review** button.
 
 1.6. On the **Review** page, enter the following detail:
 
@@ -36,9 +36,9 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 1.7. Click **Create role**.
 
-1.8. Choose **Roles** page, select the role **AWSGlueServiceDefault** you just created.
+1.8. Click **Roles** to switch page, click the role **AWSGlueServiceRoleDefault** you just created.
 
-1.9. On the **Permissions** tab, choose the link **add inline policy** to create an inline policy.
+1.9. On the **Permissions** tab, click **add inline policy** on right side to create an inline policy.
 
 1.10. On the JSON tab, paste in the following policy:
 
@@ -75,15 +75,15 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 2.1. On the **Services** menu, click **AWS Glue**.
 
-2.2. In the console, choose **Add database**. In the **Database name**, type **nycitytaxi**, and choose **Create**.
+2.2. In the console, click **Add database**. In **Database name**, type **nycitytaxi**, and click **Create**.
 
-2.3. Choose **Crawlers** in the navigation pane, choose **Add crawler**. Add type Crawler name **nytaxicrawler**, and choose **Next**.
+2.3. Click **Crawlers** in the navigation pane, click **Add crawler**. Type **nytaxicrawler** for Crawler name and click **Next**.
 
-2.4. On the **Add a data store** page, choose **S3** as the data store.
+2.4. On **Add a data store** page, select **S3** as the data store.
 
 2.5. Select **Specified path in my account**.
 
-2.6. Enter data store path **s3://aws-bigdata-blog/artifacts/glue-data-lake/data/**, and choose **Next**.
+2.6. Enter data store path **s3://aws-bigdata-blog/artifacts/glue-data-lake/data/** and click **Next**.
 
 2.7. On **Add another data store** page, choose **No**, and choose **Next**.
 
@@ -106,7 +106,7 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 ### Transform the Data from CSV to Parquet Format
 
-3.1. In the navigation pane, under **ETL**, choose **Jobs**, and then choose **Add job**.
+3.1. In the left navigation pane, under **ETL**, click **Jobs**, and then click **Add job**.
 
 3.2. On the Job properties, enter the following details:
 
@@ -147,15 +147,15 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 4.6. On **Add another data store** page, choose **No**, and choose **Next**.
 
-4.7. Select **Choose an existing IAM role**, and choose the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and choose **Next**.
+4.7. Select **Choose an existing IAM role**, and select the role  **AWSGlueServiceRoleDefault** you just created in the drop-down list, and click **Next**.
 
-4.8. For **Frequency**, choose **Run on demand**, and choose **Next**.
+4.8. For **Frequency**, choose **Run on demand**, and click **Next**.
 
-4.9. For **Database**, choose **nycitytaxi**, and choose **Next**.
+4.9. For **Database**, choose **nycitytaxi**, and click **Next**.
 
-4.10. Review the steps, and choose **Finish**.
+4.10. Review the steps, and click **Finish**.
 
-4.11. The crawler is ready to run. Choose **Run it now**.
+4.11. The crawler is ready to run. Click **Run it now**.
 
 4.12. After the crawler has finished, there are two tables in the **nycitytaxi** database: a table for the raw CSV data and a table for the transformed Parquet data.
 
@@ -172,11 +172,11 @@ AWS Glue is an essential component of an Amazon S3 data lake, providing the data
 
 5.3. Choose the **aws_glue_result_xxxx** table.
 
-5.4. Query the data, type below standard SQL:
+5.4. Type below standard SQL to query the data:
 
     Select * From "nycitytaxi"."data" limit 10;
 
-5.5. Choose **Run Query**.
+5.5. Click **Run Query**.
 
 ![Athena run query.png](/images/Athena-run-query.png)
 
